@@ -69,11 +69,7 @@ groupTable <- group_by(testTable, SubjectID, Activity)
 tidyTable <- summarise_each(groupTable, funs(mean))
 
 #remove V1 column
-tidyTable[,3] <- NULL
+tidyTable$V1 <- NULL
 
 #write a text file that contains the tidy data set to working directory
 write.table(tidyTable, "tidyTable.txt", row.names = FALSE)
-
-
-#WILL REMOVE LATER
-#write.table(names(tidyTable), "tidyNames.txt", row.names = FALSE)
