@@ -43,7 +43,7 @@ and loaded by:
 
 ###Notes:
 
-1. In the beginning, before we try to manipute any data, we check to see if the data is actually in our working directory. If not, then it will use `download.file` to retrieve it. However I had noted that if I ran it on a Windows machine it would not work due to `method = "curl"`. If this occurs replace the current
+* In the beginning, before we try to manipute any data, we check to see if the data is actually in our working directory. If not, then it will use `download.file` to retrieve it. However I had noted that if I ran it on a Windows machine it would not work due to `method = "curl"`. If this occurs replace the current
 
 #
     download.file(fileURL, destfile = "./SamsungAccel.zip", method = "curl")
@@ -54,7 +54,7 @@ with
 
 All we are doing is removing the `method = "curl"`.
 
-2. If you'd like to use `read.table` to read in the final tidy data set then set `header = TRUE` so an additional row is not created.
+* If you'd like to use `read.table` to read in the final tidy data set then set `header = TRUE` so an additional row is not created.
 
 #
     read <- read.table("tidyTable.txt", header = TRUE)

@@ -37,7 +37,7 @@ xTableNew <- subset(xTable, select = grep("mean\\(\\)|std\\(\\)", names(xTable),
 #row bind subjTrain and subjTest into one data frame then ...
 subjTable <- rbind(subjTrain, subjTest)
 #add column name
-names(subjTable) <- c("SubjectID")
+names(subjTable) <- c("subjectID")
 
 #row bind yTrain and yTest into one data frame then ...
 yTable <- rbind(yTrain, yTest)
@@ -45,7 +45,7 @@ yTable <- rbind(yTrain, yTest)
 names(yTable) <- c("V1")
 
 #give names to columns
-names(activityLabel) <- c("V1", "Activity")
+names(activityLabel) <- c("V1", "activity")
 
 #combine all tables together
 totalTable <- cbind(subjTable, yTable)
@@ -64,7 +64,7 @@ names(testTable) <- gsub("std", "Std", names(testTable))
 names(testTable) <- gsub("BodyBody", "Body", names(testTable))
 
 #group table by the subject ID and activity
-groupTable <- group_by(testTable, SubjectID, Activity)
+groupTable <- group_by(testTable, subjectID, activity)
 #make tidy data set with average of each variable for each activity and each subject
 tidyTable <- summarise_each(groupTable, funs(mean))
 
