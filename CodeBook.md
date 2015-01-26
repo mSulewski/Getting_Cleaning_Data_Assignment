@@ -353,6 +353,7 @@ fBodyGyroJerkMagStd
 * Obtained by applying a Fast Fourier Transformation.
     
 ###Data:
+
 Looking at the raw data there were originally 561 variables. All of these were not necessary for analysis; the majority were discarded due to not containing the mean or standard deviation estimates. In total, this removed 475 variables. This however was not the final number of variables found in the tidy data set. Some variables included looking at the mean frequency, `meanFreq`, or the weighted average of the frequency components to obtain a mean frequency. These were removed from the final tidy data set since we are only looking for the mean for each measurement not mean frequency. This removes another 13 variables from the data set. Finally, all the angle variables were excluded from the final data set due to the values being the angle between two vectors. These did contain mean vectors such as `angle(X,gravityMean)` but the result was not a mean, it was an angle. For this reason they are not in the final tidy data set. This leaves a final total of 66 variables in the final tidy data set, 68 including the subjectID and activity for the number ID of the subject and what activity was being performed repectively.
 
 ###Transformations:

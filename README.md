@@ -35,7 +35,7 @@ A greater detailed explaination of why certain variables were choosen over anoth
 
 In order for run_analysis.R to work the R package 'dplyr' must be installed. This can be installed by:
 
-`install.package("dplyr")`
+`install.packages("dplyr")`
 
 and loaded by:
 
